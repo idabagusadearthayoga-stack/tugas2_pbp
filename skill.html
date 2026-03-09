@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill | Gus Ade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #16213e;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        nav a:hover, nav a.active {
+            color: #0f3460;
+            background-color: #00ff88;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+        }
+        .skills-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .skills-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .skills-header h1 {
+            color: #ffffff;
+            margin: 0;
+            display: inline-block;
+            border-bottom: 3px solid #00ff88;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .skill-card {
+            background-color: #16213e;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid #00ff88;
+        }
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .skill-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skill-name i {
+            color: #00ff88;
+            font-size: 24px;
+        }
+        .skill-percentage {
+            color: #00ff88;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 10px;
+            background-color: #1a1a2e;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #00ff88;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+            transition: width 1.5s ease-in-out;
+        }
+        .skill-desc {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #0f3460;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #00ff88;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #b0b0b0;
+        }
+        @media (max-width: 768px) {
+            nav { flex-wrap: wrap; gap: 10px; }
+            nav a { width: 40%; text-align: center; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="pendidikan.html">PENDIDIKAN</a>
+            <a href="#" class="active">SKILL</a>
+        </nav>
+    </header>
+
+    <main class="skills-container">
+        <div class="skills-header">
+            <h1>Keahlian Teknis</h1>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fab fa-html5"></i> HTML & CSS Modern
+                    </div>
+                    <div class="skill-percentage">90%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                </div>
+                <p class="skill-desc">Mampu merancang layout responsif menggunakan Flexbox/Grid, serta pemahaman mendalam tentang styling web tingkat lanjut.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fab fa-python"></i> Pemrograman Python
+                    </div>
+                    <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+                <p class="skill-desc">Menguasai paradigma Procedural dan Object-Oriented Programming (OOP) untuk pemecahan masalah logika.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fab fa-figma"></i> UI/UX Design
+                    </div>
+                    <div class="skill-percentage">85%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                </div>
+                <p class="skill-desc">Terbiasa menggunakan Figma untuk membuat wireframe, prototipe, dan desain antarmuka yang user-friendly.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fas fa-server"></i> Database & Backend
+                    </div>
+                    <div class="skill-percentage">70%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+                <p class="skill-desc">Pemahaman dasar mengenai pengelolaan basis data rasional dan arsitektur server-side.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fas fa-laptop-code"></i> Software Engineering
+                    </div>
+                    <div class="skill-percentage">75%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 75%;"></div>
+                </div>
+                <p class="skill-desc">Mengerti siklus pengembangan perangkat lunak (SDLC), metode Agile, dan praktik pengembangan yang baik.</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-info">
+                    <div class="skill-name">
+                        <i class="fas fa-camera"></i> Multimedia Visual
+                    </div>
+                    <div class="skill-percentage">80%</div>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+                <p class="skill-desc">Memiliki kemampuan dalam dokumentasi, fotografi, videografi, serta pemahaman dasar tata cahaya.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Anak Agung Bagus Pramana Putra Suada. Tugas Pemrograman Web.</p>
+    </footer>
+</body>
+</html>
