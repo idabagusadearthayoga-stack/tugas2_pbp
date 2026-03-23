@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Form Kontak</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #22c55e;
+  color: black;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+nav a.active {
+  background: #22c55e;
+  color: black;
+}
+
+/* FORM BOX */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(34,197,94,0.3);
+  transition: 0.3s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(34,197,94,0.6);
+}
+
+h1 {
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* RESULT */
+#hasil {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">HOME</a>
+  <a href="pendidikan.html">PENDIDIKAN</a>
+  <a href="skill.html">SKILL</a>
+  <a href="form.html" class="active">FORM</a>
+  <a href="kalkulator.html">KALKULATOR</a>
+</nav>
+
+<div class="container">
+  <h1>Hubungi Saya</h1>
+
+  <input type="text" id="nama" placeholder="Nama">
+  <input type="email" id="email" placeholder="Email">
+  <textarea id="pesan" placeholder="Pesan"></textarea>
+
+  <button onclick="kirim()">Kirim</button>
+
+  <p id="hasil"></p>
+</div>
+
+<script>
+function kirim() {
+  let nama = document.getElementById("nama").value;
+  let email = document.getElementById("email").value;
+  let pesan = document.getElementById("pesan").value;
+
+  if(nama === "" || email === "" || pesan === "") {
+    document.getElementById("hasil").innerHTML = "⚠️ Harap isi semua data!";
+  } else {
+    document.getElementById("hasil").innerHTML =
+      "✅ Terima kasih " + nama + ", pesan berhasil dikirim!";
+  }
+}
+</script>
+
+</body>
+</html>
